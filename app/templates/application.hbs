@@ -1,31 +1,35 @@
-
-<div class= "container">
+<div id="backg">
+  <img src="/images/pumpkin.jpeg" class="img img-responsive" >
+</div>
   <header>
+    <div class="top-bar">
     {{#side-menu-toggle}}
       <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
-      {{#side-menu}}
+      {{#side-menu width="25%" id="menu"}}
         <ul class="nav-list">
-            {{#link-to "index"}}
+            {{#link-to "index" class="menu-link"}}
               Homepage
             {{/link-to}}
             <br>
-            {{#link-to "about"}}
+            {{#link-to "about" class="menu-link"}}
               About
             {{/link-to}}
             <br>
-            {{#link-to "contact"}}
+            {{#link-to "contact" class="menu-link"}}
               Contact
             {{/link-to}}
             <br>
-            {{#link-to 'new-post'}}
+            {{#link-to 'new-post' class="menu-link"}}
               New Blog Post
             {{/link-to}}
         </ul>
       {{/side-menu}}
     {{/side-menu-toggle}}
-    <h1>Monster Blog</h1>
+    </div>
   </header>
 
+<div class= "container">
+  <h1>Monster Blog</h1>
   {{content-backdrop}}
     {{outlet}}
   <hr>

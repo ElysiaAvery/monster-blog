@@ -1,10 +1,63 @@
 @import "ember-side-menu";
+body {
+  background-color: #6D6974;
+  font-family: 'Cabin Condensed', sans-serif;
+
+}
+
+h1 {
+  font-family: 'IM Fell English', serif;
+  font-size: 7em;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+#menu {
+  background-color: #6E6772;
+}
 
 img {
   height: auto;
   width: 15em;
 }
 
+.top-bar {
+  width: 100%;
+  background-color: grey;
+}
+
+.panel {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.glyphicon {
+  margin-left: 2em;
+}
+
 #hamburger {
   font-size: 3em;
+}
+
+.menu-link {
+  color: #1F1724;
+}
+
+#backg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+
+#backg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
 }
