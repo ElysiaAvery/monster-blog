@@ -1,0 +1,12 @@
+<div class="row panel">
+  <div class="col-sm-4">
+    <img src={{model.image}}>
+  </div>
+  <div class="col-sm-8">
+    <h4><strong>{{model.title}}</strong></h4>
+    <h6><em>{{model.author}}</em></h6>
+    <p>{{model.content}}</p>
+  </div>
+</div>
+<button {{action 'destroyPost' model}}>Delete Post</button>
+{{edit-post updatePost='updatePost' post=model}}

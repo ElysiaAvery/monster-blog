@@ -17,9 +17,18 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyBU31VvtkC54-QQ6dOtm0_iSWhuPULY3ko",
+      authDomain: "monster-blog.firebaseapp.com",
+      databaseURL: "https://monster-blog.firebaseio.com",
+      storageBucket: "monster-blog.appspot.com",
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    }, tinyMCE:{
+      load: false
     }
   };
 

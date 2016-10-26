@@ -1,0 +1,35 @@
+
+<div class= "container">
+  <header>
+    {{#side-menu-toggle}}
+      <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
+      {{#side-menu}}
+        <ul class="nav-list">
+            {{#link-to "index"}}
+              Homepage
+            {{/link-to}}
+            <br>
+            {{#link-to "about"}}
+              About
+            {{/link-to}}
+            <br>
+            {{#link-to "contact"}}
+              Contact
+            {{/link-to}}
+            <br>
+            {{#link-to 'new-post'}}
+              New Blog Post
+            {{/link-to}}
+        </ul>
+      {{/side-menu}}
+    {{/side-menu-toggle}}
+    <h1>Monster Blog</h1>
+  </header>
+
+  {{content-backdrop}}
+    {{outlet}}
+  <hr>
+  <footer>
+
+  </footer>
+</div>

@@ -1,0 +1,10 @@
+<div class="row panel">
+  <div class="col-sm-4">
+    <img src={{post.image}}>
+  </div>
+  <div class="col-sm-8">
+    {{#link-to 'posts' post.id}}<h4><strong>{{post.title}}</strong></h4>{{/link-to}}
+    <h6><em>{{post.author}}, {{post.date}}</em></h6>
+
+  </div>
+</div>
