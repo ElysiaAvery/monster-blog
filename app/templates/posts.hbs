@@ -7,10 +7,10 @@
     <h6><em>{{model.author}}</em></h6>
     <p>{{model.content}}</p>
   </div>
-</div>
-<div class="panel">
   <button {{action 'destroyPost' model}}>Delete Post</button>
   {{edit-post updatePost='updatePost' post=model}}
+</div>
+<div class="panel">
   <h4>Comments</h4>
   {{#if model.comments}}
     {{#each model.comments as |comment|}}

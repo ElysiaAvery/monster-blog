@@ -12,7 +12,7 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyPost(model) {
-      var comment_destruction = model.get('comments').then(function(comment) {
+      var comment_destruction = model.get('comments').map(function(comment) {
         return comment.destroyRecord();
       });
       Ember.RSVP.all(comment_destruction).then(function() {
