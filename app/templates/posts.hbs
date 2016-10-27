@@ -8,5 +8,16 @@
     <p>{{model.content}}</p>
   </div>
 </div>
-<button {{action 'destroyPost' model}}>Delete Post</button>
-{{edit-post updatePost='updatePost' post=model}}
+<div class="panel">
+  <button {{action 'destroyPost' model}}>Delete Post</button>
+  {{edit-post updatePost='updatePost' post=model}}
+  <h4>Comments</h4>
+  {{#if model.comments}}
+    {{#each model.comments as |comment|}}
+      {{comment-display comment=comment}}
+    {{/each}}
+  {{else}}
+    <h5>No Comments..</h5>
+  {{/if}}
+  {{new-comment sendNewComment='catchNewComment' post=model}}
+</div>

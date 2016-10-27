@@ -1,0 +1,11 @@
+<div class="row panel">
+  <div class="col-sm-12">
+    <p>{{comment.author}} - {{comment.date}}</p>
+    <p>{{comment.content}}</p>
+    <div class="row">
+      <div class="col-offset-sm-10 col-sm-2">
+        <button {{action "destroyComment"}}>Delete Comment</button>
+      </div>
+    </div>
+  </div>
+</div>
