@@ -12,7 +12,12 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyPost(model) {
-      model.destroyRecord();
+      var comment_destruction = model.get('comments').then(function(comment) {
+        return comment.destroyRecord();
+      });
+      Ember.RSVP.all(comment_destruction).then(function() {
+        return model.destroyRecord();
+      });
       this.transitionTo('index');
     },
     updatePost(model, params) {
@@ -31,6 +36,19 @@ export default Ember.Route.extend({
       newComment.save().then(function() {
         return post.save();
       });
+      this.transitionTo('posts');
+    },
+    destroyComment(comment) {
+      comment.destroyRecord();
+      this.transitionTo('posts');
+    },
+    updateComment(comment, params) {
+      Object.keys(params).forEach(function(key) {
+        if(key !== undefined) {
+          comment.set(key, params[key]);
+        }
+      });
+      comment.save();
       this.transitionTo('posts');
     }
   }

@@ -14,7 +14,7 @@
   <h4>Comments</h4>
   {{#if model.comments}}
     {{#each model.comments as |comment|}}
-      {{comment-display comment=comment}}
+      {{comment-display comment=comment destroyComment='destroyComment' updateComment='updateComment'}}
     {{/each}}
   {{else}}
     <h5>No Comments..</h5>

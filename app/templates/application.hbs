@@ -29,7 +29,9 @@
   </header>
 
 <div class= "container">
-  <h1>Monster Blog</h1>
+  {{#link-to "index" class="main-title"}}
+    Monster Blog
+  {{/link-to}}
   {{content-backdrop}}
     {{outlet}}
   <hr>
