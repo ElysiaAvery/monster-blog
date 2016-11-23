@@ -1,7 +1,7 @@
-# Blog
+# Monster Blog
+Made By: Elysia Nason & Satchel Grant
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A blog that allows the users to add new posts, edit posts, and delete.
 
 ## Prerequisites
 
